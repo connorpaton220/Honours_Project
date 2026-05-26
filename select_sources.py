@@ -26,6 +26,11 @@ done = set()
  
 ds = load_dataset('HuggingFaceFW/fineweb', name='CC-MAIN-2024-10',
                   split='train', streaming=True)
+
+first = next(iter(ds), None)
+print('First example:', first, flush=True)
+if first is None:
+    print('ERROR: dataset is empty or unreachable', flush=True)
  
 for ex in ds:
     if len(done) == len(DOMAINS): break
