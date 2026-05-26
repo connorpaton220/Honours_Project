@@ -24,7 +24,7 @@ out.mkdir(parents=True, exist_ok=True)
 counts = {d: 0 for d in DOMAINS}
 done = set()
  
-ds = load_dataset('HuggingFaceFW/fineweb-2', name='enl_Latn',
+ds = load_dataset('HuggingFaceFW/fineweb', name='CC-MAIN-2024-10',
                   split='train', streaming=True)
  
 for ex in ds:
