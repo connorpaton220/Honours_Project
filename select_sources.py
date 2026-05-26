@@ -18,7 +18,7 @@ DOMAINS = {
 DOCS_PER_DOMAIN = 60_000  # enough for all 17 languages
 MIN_WORDS, MAX_WORDS = 80, 300  # short docs = faster translation
  
-out = Path('/scratch/$ptncon001/synthetic/sources')
+out = Path('/scratch/ptncon001/synthetic/sources')
 out.mkdir(parents=True, exist_ok=True)
  
 counts = {d: 0 for d in DOMAINS}
