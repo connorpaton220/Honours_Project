@@ -1,0 +1,8 @@
+#!/bin/sh
+#SBATCH --account=compsci
+#SBATCH --partition=ada
+#SBATCH --nodes=1 --ntasks=1
+#SBATCH --time=10:00
+#SBATCH --job-name="SelectSources"
+module load python/miniconda3-py3.12
+python select_sources.py
